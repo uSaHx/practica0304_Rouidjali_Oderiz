@@ -1,6 +1,5 @@
 from clases import *
 
-vidas_texto = pygame.font.SysFont("comicsans", 100)
 def main():
     clock = pygame.time.Clock()
 

@@ -3,7 +3,6 @@ import random
 import pygame
 import math
 
-pygame.init()
 # Inicializador
 pygame.init()
 
@@ -11,7 +10,6 @@ pygame.init()
 ancho, alto = 1280, 960
 pantalla = pygame.display.set_mode((ancho, alto))
 fondo = pygame.image.load("campo.jpg")
-fin_juego = pygame.image.load("over.png")
 fondo = pygame.transform.scale(fondo, (ancho, alto))
 pygame.display.set_caption("bloque Breaker")
 pygame.mixer.init()
@@ -39,8 +37,8 @@ class Barra:
         pygame.draw.rect(
             pantalla, self.color, (self.x, self.y, self.ancho, self.alto))
 
-    def move(self, direction=1):
-        self.x = self.x + self.VEL * direction
+    def move(self, direccion=1):
+        self.x = self.x + self.VEL * direccion
 
 
 class Pelota:
